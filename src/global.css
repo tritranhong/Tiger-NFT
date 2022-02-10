@@ -1,0 +1,27 @@
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(46, 44, 44, 0.8);
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.upload-list-inline .ant-upload-list-item {
+  float: left;
+  width: 200px;
+  margin-right: 8px;
+}
+
+.upload-list-inline [class*='-upload-list-rtl'] .ant-upload-list-item {
+  float: right;
+}
