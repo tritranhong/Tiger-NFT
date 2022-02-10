@@ -12,7 +12,7 @@ Step 2: Storage deposit in MARKET CONTRACT!
 
 One command:
 
-    near call MARKET_CONTRACT_NAME storate_deposit --accountId ACCOUNT_ID --deposit 0.01
+    near call MARKET_CONTRACT_NAME storage_deposit --accountId ACCOUNT_ID --deposit 0.01
 
 Step 3: Test!
 ---------------
