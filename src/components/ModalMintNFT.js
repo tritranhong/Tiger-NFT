@@ -78,7 +78,12 @@ function ModalMintNFT(props) {
           />
           <span>Royalties rates:</span>
           <br></br>
-          <InputNumber addonAfter="%" defaultValue={10} max={100} />
+          <InputNumber
+            addonAfter="%"
+            defaultValue={10}
+            max={100}
+            onChange={(e) => setRoyalty(e.target.value)}
+          />
         </Col>
         <Col span={12} style={{ display: 'flex', justifyContent: 'center' }}>
           <Card

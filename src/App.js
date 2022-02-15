@@ -46,8 +46,8 @@ export default function App() {
           mode="horizontal"
           style={{ justifyContent: 'space-evenly', display: 'flex' }}>
           <Menu.Item>
-            <div style={{ display: 'flex' }}>
-              <Link to={'/'}>𝓣𝓲𝓰𝓮𝓻 𝓝𝓕𝓣</Link>
+            <div style={{ display: 'flex', color: 'red' }}>
+              <Link to={'/'}><span style={{color: 'red'}}>𝓣𝓲𝓰𝓮𝓻 𝓝𝓕𝓣</span></Link>
             </div>
           </Menu.Item>
           <Menu.Item>

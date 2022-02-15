@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Input, Divider, Radio } from 'antd';
 
-function ModalSale(props) {
+function ModalDeposit(props) {
   const [price, setPrice] = useState(0);
   const [token, setToken] = useState('NEAR');
 
@@ -15,7 +15,7 @@ function ModalSale(props) {
 
   return (
     <Modal
-      title="Put your NFT on Sale"
+      title="Deposit Storage"
       visible={props.visible}
       onOk={handleOk}
       onCancel={props.handleCancel}
@@ -30,17 +30,12 @@ function ModalSale(props) {
       </div>
       <div>
         <span style={{ marginBottom: 10, display: 'block' }}>
-          Input price ({token}):
+          Deposit: 0.1 {token}
         </span>
-        <Input
-          type={'number'}
-          onChange={(e) => setPrice(e.target.value)}
-          placeholder={'ex: 1000 ...'}
-          size="large"
-        />
+        
       </div>
     </Modal>
   );
 }
 
-export default ModalSale;
+export default ModalDeposit;

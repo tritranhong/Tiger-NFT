@@ -9,10 +9,13 @@ import {
   Col,
   Breadcrumb,
   Modal,
+  Radio 
 } from 'antd';
+
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { utils, transactions } from 'near-api-js';
 import { login, parseTokenWithDecimals } from '../utils';
+import ModalDetail from '../components/ModalDetail';
 import { functionCall } from 'near-api-js/lib/transaction';
 
 const { Meta } = Card;
@@ -20,6 +23,8 @@ const { Meta } = Card;
 function MarketPlace() {
   const [data, setData] = useState([]);
   const [tokenList, setTokenList] = useState([]);
+  const [detailVisible, setDetailVisible] = useState(false);
+
 
   async function handleBuy(item) {
     console.log(item);
@@ -121,27 +126,59 @@ function MarketPlace() {
     }
   }, []);
 
-  function handleClickDetail(item) {
+  function handleClickDetail(data) {
     // const [accountID, storageAccountId] = useState('Account');
     // const [id, setId] = useState('Token Id');
     // const [title, setTitle] = useState('Title');
     // const [description, setDescription] = useState('Description');
     // const [royalty, setRoyalty] = useState('Royalty rate');
-    console.log(item);
-    return alert(
-      `Owner: ${item.owner_id}
+    console.log(data);
+//     return alert(
+//       `Owner: ${data.owner_id}
 
-Title: ${item.itemData.metadata.title}
+// Title: ${data.itemData.metadata.title}
 
-description: ${item.itemData.metadata.description}
+// description: ${data.itemData.metadata.description}
 
-Media: ${item.itemData.metadata.media}
+// Media: ${data.itemData.metadata.media}
 
-Token ID: ${item.token_id}
+// Token ID: ${data.token_id}
     
-    
-    `
-    );
+//     `
+//     );  
+const [detailVisible, setDetailVisible] = useState(false);
+
+return (
+  <Modal
+    title="Detail"
+    visible={props.visible}
+  //   onOk={handleOk}
+    onCancel={props.handleCancel}
+    footer={null}
+    centered>
+   <div style={{ marginBottom: 30 }}>
+      <span style={{ marginBottom: 10, display: 'block' }}>
+        Owner: `${item.owner_id}`
+      </span>
+      <span style={{ marginBottom: 10, display: 'block' }}>
+        Title:
+      </span>
+      <span style={{ marginBottom: 10, display: 'block' }}>
+        Description:
+      </span>
+      <span style={{ marginBottom: 10, display: 'block' }}>
+        Media:
+      </span>
+      <span style={{ marginBottom: 10, display: 'block' }}>
+        Token ID:
+      </span>
+    </div>
+  </Modal>
+);
+  
+
+
+
   }
 
   useEffect(async () => {
@@ -182,7 +219,7 @@ Token ID: ${item.token_id}
           Sales
         </Button>
         <Button style={{ margin: '0 10px', borderRadius: '10px' }}>
-          Aunctions
+          Auctions
         </Button>
       </Breadcrumb>
       <Row
@@ -215,8 +252,10 @@ Token ID: ${item.token_id}
                   <Button
                     onClick={() => handleBuy(item)}
                     icon={<ShoppingCartOutlined />}>
-                    Purchase
+                    Detail
                   </Button>,
+                 
+                  
                 ]}>
                 <h1>
                   {item.sale_conditions.is_native

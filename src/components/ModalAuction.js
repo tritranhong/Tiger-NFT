@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Modal, Input, Divider, Radio } from 'antd';
+import { Modal, Input, Divider, Radio, DatePicker } from 'antd';
 
-function ModalSale(props) {
+function ModalAuction(props) {
   const [price, setPrice] = useState(0);
   const [token, setToken] = useState('NEAR');
 
@@ -15,7 +15,7 @@ function ModalSale(props) {
 
   return (
     <Modal
-      title="Put your NFT on Sale"
+      title="Put your NFT on Auction"
       visible={props.visible}
       onOk={handleOk}
       onCancel={props.handleCancel}
@@ -30,7 +30,7 @@ function ModalSale(props) {
       </div>
       <div>
         <span style={{ marginBottom: 10, display: 'block' }}>
-          Input price ({token}):
+          Start price ({token}):
         </span>
         <Input
           type={'number'}
@@ -38,9 +38,19 @@ function ModalSale(props) {
           placeholder={'ex: 1000 ...'}
           size="large"
         />
+        <span>Time</span>
+        <Input.Group compact>
+          <Input style={{ width: '50%' }} defaultValue="input content" />
+          <DatePicker style={{ width: '50%' }} />
+        </Input.Group>
+        <br />
+        <Input.Group compact>
+          <Input style={{ width: '30%' }} defaultValue="input content" />
+          <DatePicker.RangePicker style={{ width: '70%' }} />
+        </Input.Group>
       </div>
     </Modal>
   );
 }
 
-export default ModalSale;
+export default ModalAuction;

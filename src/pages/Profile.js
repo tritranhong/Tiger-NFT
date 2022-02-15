@@ -4,16 +4,20 @@ import {
   SendOutlined,
   DollarCircleOutlined,
   EllipsisOutlined,
+  SelectOutlined,
 } from '@ant-design/icons';
 import ModalTransferNFT from '../components/ModalTransferNFT';
 import ModalSale from '../components/ModalSale';
 import { default as PublicKey, transactions, utils } from 'near-api-js';
 import { functionCall, createTransaction } from 'near-api-js/lib/transaction';
-import ModalMintNFT from '../components/ModelMintNFT';
+import ModalMintNFT from '../components/ModalMintNFT';
 import { login, parseTokenAmount } from '../utils';
 import BN from 'bn.js';
 import { baseDecode } from 'borsh';
 import getConfig from '../config';
+import ModalDeposit from '../components/ModalDeposit';
+import ModalAuction from '../components/ModalAuction';
+import ModalDetail from '../components/ModalDetail';
 
 const nearConfig = getConfig(process.env.NODE_ENV || 'development');
 const { Meta } = Card;
@@ -23,7 +27,10 @@ function Profile() {
   const [transferVisible, setTransferVisible] = useState(false);
   const [saleVisible, setSaleVisible] = useState(false);
   const [mintVisible, setMintVisible] = useState(false);
+  const [auctionVisible, setAuctionVisible] = useState(false);
   const [currentToken, setCurrentToken] = useState(null);
+  const [depositVisible, setDepositVisible] = useState(false);
+  const [detailVisible, setDetailVisible] = useState(false);
 
   useEffect(async () => {
     if (window.accountId) {
@@ -54,6 +61,11 @@ function Profile() {
     setCurrentToken(token);
 
     setSaleVisible(true);
+  }
+
+  function handleAuctionToken(token) {
+    setCurrentToken(token);
+    setAuctionVisible(true);
   }
 
   async function submitTransfer(accountId, tokenId) {
@@ -179,7 +191,7 @@ function Profile() {
           notification['warning']({
             message: 'Không đủ Storage Balance',
             description:
-              'Storage Balance của bạn không đủ để đăng bán NFT mới. Vui lòng nạp thêm tại đây!',
+              'Storage Balance của bạn không đủ để đăng bán NFT mới. Vui lòng nạp thêm!',
           });
         }
       }
@@ -189,6 +201,16 @@ function Profile() {
     } finally {
       setTransferVisible(false);
     }
+  }
+  async function submitOnDeposit(data) {
+         
+     await window.contractMarket.storage_deposit(
+       {
+         account_id: window.accountId,
+       },
+       30000000000000,
+       utils.format.parseNearAmount('0.1')
+     )
   }
 
   async function submitOnMint(data) {
@@ -202,7 +224,7 @@ function Profile() {
             metadata: {
               title: data.tokenTitle,
               description: data.description,
-              media: data.media,
+              media: data.media,contract
             },
           },
           30000000000000,
@@ -222,6 +244,40 @@ function Profile() {
     }
   }
 
+  function handleClickDeposit() {
+    if (window.walletConnection.isSignedIn()) {
+      setDepositVisible(true);
+    } else {
+      login();
+    }
+  }
+
+  function handleClickDetail() {
+    if (window.walletConnection.isSignedIn()) {
+      setDetailVisible(true);
+    } else {
+      login();
+    }
+  }
+
+  function handleClickAuction() {
+    if (window.walletConnection.isSignedIn()) {
+      setAuctionVisible(true);
+    }else {
+      login();
+    }
+  }
+  async function handleRemoveSale (data) {
+    console.log(data.token_id)
+    await window.contractMarket.remove_sale({
+      nft_contract_id: window.accountId,
+      token_id: data.token_id,
+    },
+    30000000000000,
+    utils.format.parseNearAmount('0.01')
+    );
+  }
+
   return (
     <div>
       <PageHeader
@@ -234,6 +290,12 @@ function Profile() {
             style={{ borderRadius: 15 }}>
             Create Your Own NFT
           </Button>,
+          <Button
+            onClick={handleClickDeposit}
+            key="4"
+            style={{ borderRadius: 15 }}>
+            Deposit Storage
+          </Button>,
         ]}
       />
       <Row style={{ padding: 30, justifyContent: 'space-evenly' }}>
@@ -244,14 +306,16 @@ function Profile() {
                 key={item.token_id}
                 hoverable
                 style={{
-                  width: 300,
+                  width: 360,
                   marginBottom: 30,
                   borderRadius: 15,
                   overflow: 'hidden',
                 }}
                 cover={
                   <img
-                    style={{ height: 300, width: 300, objectFit: 'contain' }}
+                onClick ={handleClickDetail}
+
+                    style={{ height: 300, width: 360, objectFit: 'contain' }}
                     alt="nft-cover"
                     src={item.metadata.media}
                   />
@@ -261,19 +325,41 @@ function Profile() {
                     style={{ minWidth: 80 }}
                     onClick={() => handleTransferToken(item)}
                     key={'send'}>
-                    Transfer
+                      {    
+                    item.approved_account_ids[nearConfig.marketContractName] >=
+                    0
+                      ? ''
+                      : 'Transfer'
+                    }
                   </Button>,
                   <Button
                     style={{ minWidth: 80 }}
                     onClick={() => handleSaleToken(item)}
                     key={'sell'}>
-                    Sell
+                    {    
+                    item.approved_account_ids[nearConfig.marketContractName] >=
+                    0
+                      ? 'Update Price'
+                      : 'Sell'
+                    }
+                
                   </Button>,
+
+                  
                   <Button
                     style={{ minWidth: 80 }}
-                    onClick={() => handleSaleToken(item)}
-                    key={'sell'}>
-                    Auction
+                    onClick={item.approved_account_ids[nearConfig.marketContractName] >=
+                      0
+                        ? () => handleRemoveSale(item)
+                        : () => handleAuctionToken(item)
+                      }
+                    key={'auction'}>
+                    {    
+                    item.approved_account_ids[nearConfig.marketContractName] >=
+                    0
+                      ? 'Remove '
+                      : 'Auction'
+                    }
                   </Button>,
                 ]}>
                 <Meta
@@ -281,8 +367,8 @@ function Profile() {
                   title={`${item.metadata.title} (${
                     item.approved_account_ids[nearConfig.marketContractName] >=
                     0
-                      ? 'SALE'
-                      : 'NOT SALE'
+                      ? 'On Sale'
+                      : ''
                   })`}
                   description={`
                     ${item.metadata.description}
@@ -303,11 +389,27 @@ function Profile() {
         handleOk={submitOnSale}
         handleCancel={() => setSaleVisible(false)}
       />
+      <ModalAuction
+        visible={auctionVisible}
+        // handleOk={submitOnAuction}
+        handleCancel={() => setAuctionVisible(false)}
+      />
       <ModalMintNFT
         visible={mintVisible}
         handleOk={submitOnMint}
         handleCancel={() => setMintVisible(false)}
       />
+      <ModalDeposit
+        visible={depositVisible}
+        handleOk={submitOnDeposit}
+        handleCancel={() => setDepositVisible(false)}
+      />
+      <ModalDetail
+      visible={detailVisible}
+      handleCancel={() => setDetailVisible(false)}
+      ></ModalDetail>
+     
+    
     </div>
   );
 }
