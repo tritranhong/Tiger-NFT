@@ -133,48 +133,48 @@ function MarketPlace() {
     // const [description, setDescription] = useState('Description');
     // const [royalty, setRoyalty] = useState('Royalty rate');
     console.log(data);
-//     return alert(
-//       `Owner: ${data.owner_id}
+    return alert(
+      `Owner: ${data.owner_id}
 
-// Title: ${data.itemData.metadata.title}
+Title: ${data.itemData.metadata.title}
 
-// description: ${data.itemData.metadata.description}
+description: ${data.itemData.metadata.description}
 
-// Media: ${data.itemData.metadata.media}
+Media: ${data.itemData.metadata.media}
 
-// Token ID: ${data.token_id}
+Token ID: ${data.token_id}
     
-//     `
-//     );  
-const [detailVisible, setDetailVisible] = useState(false);
+    `
+    );  
+// const [detailVisible, setDetailVisible] = useState(false);
 
-return (
-  <Modal
-    title="Detail"
-    visible={props.visible}
-  //   onOk={handleOk}
-    onCancel={props.handleCancel}
-    footer={null}
-    centered>
-   <div style={{ marginBottom: 30 }}>
-      <span style={{ marginBottom: 10, display: 'block' }}>
-        Owner: `${item.owner_id}`
-      </span>
-      <span style={{ marginBottom: 10, display: 'block' }}>
-        Title:
-      </span>
-      <span style={{ marginBottom: 10, display: 'block' }}>
-        Description:
-      </span>
-      <span style={{ marginBottom: 10, display: 'block' }}>
-        Media:
-      </span>
-      <span style={{ marginBottom: 10, display: 'block' }}>
-        Token ID:
-      </span>
-    </div>
-  </Modal>
-);
+// return (
+//   <Modal
+//     title="Detail"
+//     visible={props.visible}
+//   //   onOk={handleOk}
+//     onCancel={props.handleCancel}
+//     footer={null}
+//     centered>
+//    <div style={{ marginBottom: 30 }}>
+//       <span style={{ marginBottom: 10, display: 'block' }}>
+//         Owner: `${item.owner_id}`
+//       </span>
+//       <span style={{ marginBottom: 10, display: 'block' }}>
+//         Title:
+//       </span>
+//       <span style={{ marginBottom: 10, display: 'block' }}>
+//         Description:
+//       </span>
+//       <span style={{ marginBottom: 10, display: 'block' }}>
+//         Media:
+//       </span>
+//       <span style={{ marginBottom: 10, display: 'block' }}>
+//         Token ID:
+//       </span>
+//     </div>
+//   </Modal>
+
   
 
 
