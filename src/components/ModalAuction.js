@@ -36,16 +36,12 @@ function ModalAuction(props) {
           type={'number'}
           onChange={(e) => setPrice(e.target.value)}
           placeholder={'ex: 1000 ...'}
-          size="large"
+          size="medium"
+          style={{ marginBottom: 10, display: 'block' }}
         />
-        <span>Time</span>
+        <span style={{ marginBottom: 10, display: 'block' }}>Time:</span>
+       
         <Input.Group compact>
-          <Input style={{ width: '50%' }} defaultValue="input content" />
-          <DatePicker style={{ width: '50%' }} />
-        </Input.Group>
-        <br />
-        <Input.Group compact>
-          <Input style={{ width: '30%' }} defaultValue="input content" />
           <DatePicker.RangePicker style={{ width: '70%' }} />
         </Input.Group>
       </div>

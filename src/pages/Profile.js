@@ -224,7 +224,7 @@ function Profile() {
             metadata: {
               title: data.tokenTitle,
               description: data.description,
-              media: data.media,contract
+              media: data.media.contract
             },
           },
           30000000000000,
@@ -268,9 +268,9 @@ function Profile() {
     }
   }
   async function handleRemoveSale (data) {
-    console.log(data.token_id)
+    console.log(data)
     await window.contractMarket.remove_sale({
-      nft_contract_id: window.accountId,
+      nft_contract_id: data.nft_contract_id,
       token_id: data.token_id,
     },
     30000000000000,
@@ -357,7 +357,7 @@ function Profile() {
                     {    
                     item.approved_account_ids[nearConfig.marketContractName] >=
                     0
-                      ? 'Remove '
+                      ? ''
                       : 'Auction'
                     }
                   </Button>,

@@ -12,7 +12,7 @@ import {
   Radio 
 } from 'antd';
 
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import { ShoppingCartOutlined, MinusCircleOutlined  } from '@ant-design/icons';
 import { utils, transactions } from 'near-api-js';
 import { login, parseTokenWithDecimals } from '../utils';
 import ModalDetail from '../components/ModalDetail';
@@ -210,6 +210,20 @@ Token ID: ${data.token_id}
     }
   }, []);
 
+  async function handleRemoveSale (item) {
+    console.log(item.token_id)
+    console.log(item.nft_contract_id)
+    await window.contractMarket.remove_sale(
+      {
+        nft_contract_id: item.nft_contract_id,
+        token_id: item.token_id,
+        
+      },
+      10000000000000,
+              utils.format.parseNearAmount('0.01')
+    );
+  }
+
   return (
     <div>
       <PageHeader className="site-page-header" title="Marketplace" />
@@ -231,7 +245,7 @@ Token ID: ${data.token_id}
           return (
             <Col>
               <Card
-                onClick={() => handleClickDetail(item)}
+                
                 title={`@${item.owner_id}`}
                 key={item.token_id}
                 hoverable
@@ -243,6 +257,7 @@ Token ID: ${data.token_id}
                 }}
                 cover={
                   <img
+                  onClick={() => handleClickDetail(item)}
                     style={{ height: 300, width: 300, objectFit: 'contain' }}
                     alt="Media NFT"
                     src={item.itemData.metadata.media}
@@ -250,10 +265,16 @@ Token ID: ${data.token_id}
                 }
                 actions={[
                   <Button
-                    onClick={() => handleBuy(item)}
-                    icon={<ShoppingCartOutlined />}>
-                    Detail
+                    onClick={window.accountId === item.owner_id
+                    ? () => handleRemoveSale(item)
+                    :() => handleBuy(item)} 
+                    >
+                    {window.accountId === item.owner_id 
+                    ? 'Remove From Market'
+                    : 'Purchase'
+                    }
                   </Button>,
+                 
                  
                   
                 ]}>
