@@ -224,7 +224,7 @@ function Profile() {
             metadata: {
               title: data.tokenTitle,
               description: data.description,
-              media: data.media.contract
+              media: data.media,
             },
           },
           30000000000000,
