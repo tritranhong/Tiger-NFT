@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\debug\build\typenum-d8ce3382934997c2\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\debug\build\typenum-d8ce3382934997c2\out\op.rs

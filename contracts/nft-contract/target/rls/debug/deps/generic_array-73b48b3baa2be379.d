@@ -1,0 +1,11 @@
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\deps\generic_array-73b48b3baa2be379.rmeta: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\hex.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\impls.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\arr.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\functional.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\iter.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\sequence.rs
+
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\deps\generic_array-73b48b3baa2be379.d: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\hex.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\impls.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\arr.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\functional.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\iter.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\sequence.rs
+
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\lib.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\hex.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\impls.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\arr.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\functional.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\iter.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\generic-array-0.14.5\src\sequence.rs:

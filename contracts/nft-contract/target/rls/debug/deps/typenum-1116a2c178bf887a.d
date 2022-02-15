@@ -1,0 +1,18 @@
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\deps\typenum-1116a2c178bf887a.rmeta: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\bit.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\int.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\marker_traits.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\operator_aliases.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\private.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\type_operators.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\uint.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\array.rs f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\op.rs f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\consts.rs
+
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\deps\typenum-1116a2c178bf887a.d: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\bit.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\int.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\marker_traits.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\operator_aliases.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\private.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\type_operators.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\uint.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\array.rs f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\op.rs f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\consts.rs
+
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\lib.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\bit.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\int.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\marker_traits.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\operator_aliases.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\private.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\type_operators.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\uint.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\typenum-1.15.0\src\array.rs:
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\op.rs:
+f:\Near\VuNguyen\nft-marketplace-tutorial\nft-contract\target\rls\debug\build\typenum-d8ce3382934997c2\out\consts.rs:
+
+# env-dep:TYPENUM_BUILD_CONSTS=f:\\Near\\VuNguyen\\nft-marketplace-tutorial\\nft-contract\\target\\rls\\debug\\build\\typenum-d8ce3382934997c2\\out\\consts.rs
+# env-dep:TYPENUM_BUILD_OP=f:\\Near\\VuNguyen\\nft-marketplace-tutorial\\nft-contract\\target\\rls\\debug\\build\\typenum-d8ce3382934997c2\\out\\op.rs

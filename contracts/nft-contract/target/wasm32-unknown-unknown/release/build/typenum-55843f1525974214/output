@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=F:\Near\Tiger\Tiger-NFT\contract\nft-contract\target\wasm32-unknown-unknown\release\build\typenum-55843f1525974214\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=F:\Near\Tiger\Tiger-NFT\contract\nft-contract\target\wasm32-unknown-unknown\release\build\typenum-55843f1525974214\out\op.rs

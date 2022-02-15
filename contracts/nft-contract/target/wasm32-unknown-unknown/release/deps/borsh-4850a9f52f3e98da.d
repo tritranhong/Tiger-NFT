@@ -1,0 +1,12 @@
+F:\Near\Tiger\Tiger-NFT\contract\nft-contract\target\wasm32-unknown-unknown\release\deps\borsh-4850a9f52f3e98da.rmeta: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src/lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\mod.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\hint.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema_helpers.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\ser\mod.rs
+
+F:\Near\Tiger\Tiger-NFT\contract\nft-contract\target\wasm32-unknown-unknown\release\deps\libborsh-4850a9f52f3e98da.rlib: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src/lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\mod.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\hint.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema_helpers.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\ser\mod.rs
+
+F:\Near\Tiger\Tiger-NFT\contract\nft-contract\target\wasm32-unknown-unknown\release\deps\borsh-4850a9f52f3e98da.d: C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src/lib.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\mod.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\hint.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema_helpers.rs C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\ser\mod.rs
+
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src/lib.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\mod.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\de\hint.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\schema_helpers.rs:
+C:\Users\ADMIN\.cargo\registry\src\github.com-1ecc6299db9ec823\borsh-0.8.2\src\ser\mod.rs:
