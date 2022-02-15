@@ -267,9 +267,9 @@ function Profile() {
       login();
     }
   }
-  async function handleRemoveSale (data) {
+  function handleRemoveSale (data) {
     console.log(data)
-    await window.contractMarket.remove_sale({
+    window.contractMarket.remove_sale({
       nft_contract_id: data.nft_contract_id,
       token_id: data.token_id,
     },

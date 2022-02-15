@@ -213,15 +213,25 @@ Token ID: ${data.token_id}
   async function handleRemoveSale (item) {
     console.log(item.token_id)
     console.log(item.nft_contract_id)
-    await window.contractMarket.remove_sale(
+    // window.contractMarket.remove_sale(
+    //   {
+    //     nft_contract_id: item.nft_contract_id,
+    //     token_id: item.token_id,
+        
+    //   },
+    //   10000000000000,
+    //           utils.format.parseNearAmount('0.01')
+    // );
+    await window.contractMarket.offer(
       {
         nft_contract_id: item.nft_contract_id,
         token_id: item.token_id,
-        
+        description: item.description,
       },
-      10000000000000,
-              utils.format.parseNearAmount('0.01')
+      300000000000000,
+      item.sale_conditions.amount
     );
+    console.log("123")
   }
 
   return (
