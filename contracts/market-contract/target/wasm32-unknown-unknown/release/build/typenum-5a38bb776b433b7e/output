@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/mnt/e/workspaceubuntu/near/keep/nft-marketplace-tutorial/market-contract/target/wasm32-unknown-unknown/release/build/typenum-5a38bb776b433b7e/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/mnt/e/workspaceubuntu/near/keep/nft-marketplace-tutorial/market-contract/target/wasm32-unknown-unknown/release/build/typenum-5a38bb776b433b7e/out/op.rs
